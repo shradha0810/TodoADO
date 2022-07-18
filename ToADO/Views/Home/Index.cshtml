@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ToADO.Models.Todos>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <br/>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <h1 class="h1" >TODO  LIST</h1>
+    <table class="table table-bordered table-hover table-striped ">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item)
+            </th>
+            <th> Operations</th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
