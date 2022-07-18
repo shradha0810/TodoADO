@@ -1,4 +1,5 @@
 # TodoADO
+A basic CRUD MVC.NET Todo Application
 ### Application
 
 https://user-images.githubusercontent.com/85180603/179450412-f7fc0f74-80f5-4204-8dad-0036bfbfb24d.mp4
